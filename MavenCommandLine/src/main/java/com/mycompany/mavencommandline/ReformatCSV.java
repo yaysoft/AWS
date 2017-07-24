@@ -8,7 +8,7 @@ import org.apache.commons.csv.*;
 public class ReformatCSV
 {
 
-    public static void RevormatCSV(String inputPath, String outputPath) throws IOException {
+    public static void ReformatCSV(String inputPath, String outputPath) throws IOException {
 
         CSVFormat tabDelimited = CSVFormat.DEFAULT;
         tabDelimited = tabDelimited.withDelimiter('\t');
@@ -17,10 +17,10 @@ public class ReformatCSV
         CSVFormat outputFormat = CSVFormat.RFC4180;
         outputFormat = outputFormat.withQuoteMode(QuoteMode.MINIMAL);
 
-        RevormatCSV(inputPath, outputPath, tabDelimited, outputFormat);
+        ReformatCSV(inputPath, outputPath, tabDelimited, outputFormat);
     }
 
-    public static void RevormatCSV(String inputPath, String outputPath, CSVFormat inputFormat, CSVFormat outputFormat) throws IOException {
+    public static void ReformatCSV(String inputPath, String outputPath, CSVFormat inputFormat, CSVFormat outputFormat) throws IOException {
 
         File inputFile = new File(inputPath);
         CSVParser inputCSV = CSVParser.parse(inputFile, Charset.defaultCharset(), inputFormat);
